@@ -1,17 +1,21 @@
 const container = document.getElementById("container");
 let mouseDown = false;
 
+createGrid(16);
+
+
 const createNew = document.getElementById("createNew");
 createNew.addEventListener("click", () => {
   const size = document.getElementById("gridSize").value;
   container.innerHTML = "";
-  document.addEventListener("mousedown", () => {
-    mouseDown = true;
-  });
-  document.addEventListener("mouseup", () => {
-    mouseDown = false;
-  });
   createGrid(size);
+});
+
+document.addEventListener("mousedown", () => {
+  mouseDown = true;
+});
+document.addEventListener("mouseup", () => {
+  mouseDown = false;
 });
 
 const chosenColor = document.getElementById("chosenColor");
