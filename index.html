@@ -4,13 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <header><h1 class="title">Etch-a-Sketch</h1></header>
-    <div id="container"></div>
+  <body class="cabin-sketch-regular">
+    <header><h1 class="cabin-sketch-bold">Etch-a-Sketch</h1></header>
+    <div id="contentScreen">
+      <div id="menu">
+        <div id="size">
+          <div>Select the size of grid: </div>
+          <div><input
+            type="range"
+            name="gridSize"
+            value="16"
+            id="gridSize"
+            min="1"
+            max="100"
+            oninput="this.nextElementSibling.value = this.value"
+          />
+          <output>16</output>
+        </div>
+        </div>
+        <button id="createNew" class="cabin-sketch-regular">Create</button>
+        <div id="colorSchemeInput">
+          <div>Choose a color scheme: </div>
+          <label for="randomColor"
+            ><input
+              type="radio"
+              name="colorScheme"
+              id="randomColor"
+              value="random"
+              checked
+            />
+            Random Color</label
+          >
+          <!-- <label for="blackGradient"
+          ><input
+            type="radio"
+            name="colorScheme"
+            id="blackGradient"
+            value="blackGradient"
+          />
+          Black Gradient</label
+        > -->
+          <label for="pickColor">
+            <input
+              type="radio"
+              name="colorScheme"
+              id="pickColor"
+              value="pickColor" />
+            Choose a color:
+            <input type="color" name="chosenColor" id="chosenColor"
+          /></label>
+        </div>
+      </div>
+      <div id="container"></div>
+    </div>
     <footer>
       Created by Woosflex.
       <a href="http://www.github.com/etch-a-sketch">Source code on GitHub</a>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -1,0 +1,97 @@
+.cabin-sketch-regular {
+    font-family: "Cabin Sketch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .cabin-sketch-bold {
+    font-family: "Cabin Sketch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("./img/background.jpg");
+    background-size: cover;
+}
+
+h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: xx-large;
+}
+
+#contentScreen {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 2rem;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu {
+    grid-column-start: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    font-size: larger;
+    gap: 1rem;
+}
+
+#createNew {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.446);
+    font-size:larger
+}
+
+#size{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#colorSchemeInput {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#container {
+    grid-column-start: 2;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vh;
+    height: 70vh;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.446);
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    flex-basis: auto;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    text-align: center;
+}
